@@ -1,0 +1,1 @@
+include numpy.i fastlayout.h memory.c

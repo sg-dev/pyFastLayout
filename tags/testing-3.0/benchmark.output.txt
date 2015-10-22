@@ -1,0 +1,35 @@
+rcattaneo@skyros:~/work/ParallelFR/fastlayout$ python demo_igraph.py 
+igraph
+Time spent in (layout_fruchterman_reingold) is:  314.277555
+layout_fr
+Time spent in (layout_fr) is:  66.66404
+layout_fr_omp
+Layouting this graph took 34.7515 sec
+Time spent in (layout_fr_omp) is:  67.344774
+layout_fr_simd
+Time spent in (layout_fr_simd) is:  48.704978
+layout_fr_omp_simd
+Layouting this graph took 27.6891 sec
+Time spent in (layout_fr_omp_simd) is:  53.371649
+layout_fr_stride
+Time spent in (layout_fr_stride) is:  65.567927
+layout_fr_stride_simd
+Time spent in (layout_fr_stride_simd) is:  25.737938
+layout_fr_stride_omp
+Layouting this graph took 36.9758 sec
+Time spent in (layout_fr_stride_omp) is:  71.482131
+layout_fr_stride_omp_simd
+Layouting this graph took 16.9886 sec
+Time spent in (layout_fr_stride_omp_simd) is:  32.296712
+
+CONCLUSIONS
++++++++++++
+* strided layout is much faster than the old interleaved
+* OpenMP is tricky ...
+* using aligned stores/loads for displacement vectors we get
+
+layout_fr_stride_simd
+Time spent in (layout_fr_stride_simd) is:  22.897086
+layout_fr_stride_omp_simd
+Layouting this graph took 13.7635 sec
+Time spent in (layout_fr_stride_omp_simd) is:  27.307605

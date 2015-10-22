@@ -1,0 +1,26 @@
+ParallelFR
+==========
+
+Goal: Parallel implementation of FR in a C-extension to python
+
+quickstart guide
+----------------
+1) go to the folder 'fastlayout'
+2) to build the module:
+  $ python setup.py build
+3) copy the .so file to the working directory
+  $ cp build/lib*/* .
+4) call the demo script ( igraph )
+  $ python demo_igraph.py
+Alternative for graph-tool (unteseted)
+  $ python demo_graph-tool.py
+5) use 'layout_fr_stride_omp_simd()' if you just want the fastest version.
+   otherwise have a look at 'fastlayout.h' for all function declarations and 'benchmark.py' for a comparison of all functions
+
+Directory structure
+-------------------
+
+The current trunk of the extension is in folder 'fastlayout/'.
+Specialized tags can be found in the respective folders.
+A documentation is locatated in the 'doc/' folder.
+
