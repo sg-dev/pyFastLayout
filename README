@@ -8,19 +8,25 @@ quickstart guide
 1) go to the folder 'fastlayout'
 2) to build the module:
   $ python setup.py build
-3) copy the .so file to the working directory
-  $ cp build/lib*/* .
+3) copy the .so file to the demo directory and change to it
+  $ cp build/lib*/* ../demo
+  $ cd ../demo
 4) call the demo script ( igraph )
-  $ python demo_igraph.py
+  $ python igraph.py
 Alternative for graph-tool (unteseted)
-  $ python demo_graph-tool.py
+  $ python graphtool.py
 5) use 'layout_fr_stride_omp_simd()' if you just want the fastest version.
    otherwise have a look at 'fastlayout.h' for all function declarations and 'benchmark.py' for a comparison of all functions
 
 Directory structure
 -------------------
 
-The current trunk of the extension is in folder 'fastlayout/'.
-Specialized tags can be found in the respective folders.
+The current version of the extension is in folder 'fastlayout/'.
+Specialized tags (converted from an older svn) can be found in 
+the respective folders.
+
 A documentation is locatated in the 'doc/' folder.
+
+Demo scripts are in the 'demo/' folder together with examle input data. Be sure
+to first build and copy the *.so file as described above.
 
